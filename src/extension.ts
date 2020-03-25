@@ -21,7 +21,7 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(runcChirome);
 
 	let runcIE = vscode.commands.registerCommand('extension.runIE', (event) => {
-		seleniumRun("npx protractor ./protractor.conf.js --specs=", event.fsPath);
+		seleniumRun("npx protractor ./protractor.conf.js --specs=.", event.fsPath);
 	});
 	context.subscriptions.push(runcIE);
 
